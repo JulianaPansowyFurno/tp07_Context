@@ -6,13 +6,15 @@ import Home from './componets/Home.js';
 import Persona from "./componets/Persona.js";
 import Estadis from "./componets/Estadis.js";
 import Form from "./componets/Form.js";
+import React,{useState} from 'react';
 import {MyContext} from './MyContext';
 
 
 function App() {
+  const [personas,setPersonas]=useState("");
   return (
     <div className="App">
-      <MyContext.Provider value={{id,setId}}>
+      <MyContext.Provider value={{personas,setPersonas}}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home/>}> </Route>

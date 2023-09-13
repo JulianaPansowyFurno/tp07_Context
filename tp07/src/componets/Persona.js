@@ -1,12 +1,12 @@
-import Personas from "./Personas.json"
-import {MyContext} from './MyContext';
 
+import {MyContext} from './MyContext';
+import {useContext} from 'react';
 
 
 function Persona() {
   const {personas, setPersonas} = useContext(MyContext);
   //const {id} = useParams();
-  const personaEncontrada = personas.find((elem) => elem.id === id)
+  const personaEncontrada = personas.find((elem) => elem.id === personas.id)
   console.log(personaEncontrada + "persona")
   return (
     <div className="per">

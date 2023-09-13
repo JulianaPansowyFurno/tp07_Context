@@ -1,7 +1,8 @@
 import Personas from "./Personas.json"
 import { Link } from 'react-router-dom';
 import React from "react";
-
+import {MyContext} from '../MyContext';
+import {useContext} from 'react';
 
 function Home() {
   const {personas, setPersonas} = useContext(MyContext);
